@@ -35,9 +35,29 @@
         color: #38bdf8;
     }
 
+    div a {
+        /* border-top: 1rem; */
+        color: #0567d8;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    div a:hover {
+        color: #38bdf8;
+    }
+
     section {
         min-height: 100vh;
         padding: 100px 40px;
+    }
+
+    .contact a, span {
+        text-decoration: none;
+        color: #0567d8;
+    }
+
+    .contact a:hover {
+        color: #38bdf8;
     }
 
     .hero {
@@ -97,4 +117,3 @@
     html {
         scroll-behavior: smooth;
     }
-    
