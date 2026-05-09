@@ -53,10 +53,26 @@
 
     /* Picture */
     img {
-        border-radius: 50px;
+        width: 220px;
+        height: 220px;
+
+        object-fit: cover;
+
+        border-radius: 50%;
+
+        border: 4px solid #38bdf8;
+
+        box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
+
+        transition: 0.3s;
     }
 
-    .contact a, span {
+    img:hover {
+        transform: scale(1.03);
+    }
+
+    .contact a,
+    span {
         text-decoration: none;
         color: #0567d8;
     }
@@ -121,4 +137,109 @@
 
     html {
         scroll-behavior: smooth;
+    }
+
+    /* MENU HAMBURGUER */
+    .menu-toggle {
+        display: none;
+
+        position: fixed;
+
+        top: 18px;
+        right: 20px;
+
+        width: 45px;
+        height: 45px;
+
+        border: none;
+
+        border-radius: 10px;
+
+        background: #38bdf8;
+
+        color: #0f172a;
+
+        font-size: 26px;
+
+        font-weight: bold;
+
+        cursor: pointer;
+
+        z-index: 2000;
+
+        transition: 0.3s;
+    }
+
+    .menu-toggle:hover {
+        transform: scale(1.05);
+    }
+
+    /* RESPONSIVIDADE */
+    @media (max-width: 768px) {
+
+        header {
+            padding: 18px 20px;
+        }
+
+        .menu-toggle {
+            display: block;
+        }
+
+        nav {
+            position: fixed;
+
+            top: 0;
+            right: -100%;
+
+            width: 240px;
+            height: 100vh;
+
+            background: #111827;
+
+            display: flex;
+            flex-direction: column;
+
+            padding: 100px 25px;
+
+            gap: 20px;
+
+            transition: 0.3s;
+
+            z-index: 1500;
+        }
+
+        nav.active {
+            right: 0;
+        }
+
+        nav a {
+            margin: 0;
+
+            font-size: 16px;
+
+            padding: 10px;
+
+            border-radius: 10px;
+        }
+
+        nav a:hover {
+            background: rgba(56, 189, 248, 0.1);
+        }
+
+        section {
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 34px;
+        }
+
+        .hero p {
+            font-size: 15px;
+        }
+
+        img {
+            width: 170px;
+            height: 170px;
+        }
     }
