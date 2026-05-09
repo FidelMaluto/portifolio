@@ -51,6 +51,11 @@
         padding: 100px 40px;
     }
 
+    /* Picture */
+    img {
+        border-radius: 50px;
+    }
+
     .contact a, span {
         text-decoration: none;
         color: #0567d8;
