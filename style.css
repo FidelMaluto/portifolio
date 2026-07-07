@@ -83,8 +83,8 @@
 
     .hero {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        /* flex-direction: column; */
+        justify-content: space-between;
     }
 
     .hero h1 {
@@ -108,6 +108,19 @@
         color: black;
         cursor: pointer;
         border-radius: 8px;
+    }
+
+    /* Linha e campo adicionais */
+    
+    .linha {
+        border-left: 2px solid #0567d8;
+        height: 250px;
+    }
+
+    .atributos {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
     }
 
     .projects {
