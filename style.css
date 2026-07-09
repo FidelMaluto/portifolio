@@ -131,6 +131,7 @@
     }
 
     .card {
+        width: 400px;
         background: #1e293b;
         padding: 20px;
         border-radius: 15px;
