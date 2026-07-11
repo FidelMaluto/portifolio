@@ -4,7 +4,7 @@ function scrollToSection(id) {
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// ===== Menu hamburguer =====
+//  Menu hamburguer 
 const menuToggle = document.getElementById('menuToggle');
 const nav = document.getElementById('mainNav');
 
@@ -20,7 +20,7 @@ document.querySelectorAll('nav a').forEach(link => {
   });
 });
 
-// ===== Scroll reveal =====
+//  Scroll reveal 
 const revealEls = document.querySelectorAll('.reveal');
 
 if (reduceMotion || !('IntersectionObserver' in window)) {
@@ -38,7 +38,7 @@ if (reduceMotion || !('IntersectionObserver' in window)) {
   revealEls.forEach(el => revealObserver.observe(el));
 }
 
-// ===== Nav ativo conforme a seção visível =====
+//  Nav ativo conforme a seção visível 
 const sections = document.querySelectorAll('main section[id]');
 const navLinks = document.querySelectorAll('nav a[data-nav]');
 
@@ -57,14 +57,14 @@ if ('IntersectionObserver' in window) {
   sections.forEach(section => navObserver.observe(section));
 }
 
-// ===== Efeito de digitação no editor =====
+//  Efeito de digitação no editor 
 const codeTyper = document.getElementById('codeTyper');
 
 const codeLines = [
   { indent: 0, html: '<span class="kw">const</span> <span class="prop">desenvolvedor</span> = {' },
   { indent: 1, html: '<span class="prop">nome</span>: <span class="str">"Fidel Maluto"</span>,' },
   { indent: 1, html: '<span class="prop">cargo</span>: <span class="str">"Full Stack Developer"</span>,' },
-  { indent: 1, html: '<span class="prop">stack</span>: [<span class="str">"Node.js"</span>, <span class="str">"Angular"</span>, <span class="str">"MongoDB"</span>],' },
+  { indent: 1, html: '<span class="prop">stack</span>: [<span class="str">"Node.js"</span>, <span class="str">"Angular"</span>, <span class="str">"MySQL"</span>],' },
   { indent: 1, html: '<span class="prop">status</span>: <span class="str">"disponivel_para_novos_projetos"</span>' },
   { indent: 0, html: '};' },
 ];
@@ -105,7 +105,7 @@ if (codeTyper) {
   }
 }
 
-// ===== Envio de mensagem via WhatsApp =====
+//  Envio de mensagem via WhatsApp 
 const whatsappForm = document.getElementById('whatsappForm');
 const WHATSAPP_NUMBER = '244950620392';
 
