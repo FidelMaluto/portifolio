@@ -5,206 +5,349 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="img/fleves.png" type="image/x-icon">
-  <title>Deby | Portfólio</title>
-  <script src="script.js" defer></script>
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>Fidel Maluto — Desenvolvedor Full Stack</title>
+  <meta name="description" content="Portfólio de Fidel Maluto, Desenvolvedor Full Stack: Node.js, Angular, APIs REST, MySQL e MongoDB.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
-  <button class="menu-toggle" id="menuToggle">☰</button>
+
+  <div class="noise"></div>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+    <span></span><span></span><span></span>
+  </button>
 
   <header>
-    <h2>Deby</h2>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">Sobre</a>
-      <a href="#projects">Projetos</a>
-      <a href="#contact">Contato</a>
+    <a href="#home" class="logo"><span class="dim">~/</span>deby</a>
+    <nav id="mainNav">
+      <a href="#home" data-nav>início</a>
+      <a href="#about" data-nav>sobre</a>
+      <a href="#projects" data-nav>projetos</a>
+      <a href="#contact" data-nav>contato</a>
     </nav>
   </header>
 
-  <section id="home" class="hero">
+  <main>
 
-    <div>
-      
-    <img src="img/debygoal.jpg" alt="Deby Goal">
-    <br><br>
-    <h1><span>Fidel Maluto</span></h1>
-    <p>Desenvolvedor Full Stack | Node.js | Angular | JavaScript | APIs REST | Bootstrap | MySQL, MongoDB | HTML, CSS </p>
-    <button class="btn" onclick="scrollToSection('contact')">Fale comigo</button>
+    <!-- HERO -->
+    <section id="home" class="hero">
 
-    </div>
+      <div class="hero-text reveal">
+        <div class="eyebrow"><span class="dot pulse"></span>disponível para novos projetos</div>
+        <h1>Fidel <span>Maluto</span></h1>
+        <p class="role">Desenvolvedor Full Stack construindo aplicações web do frontend ao backend — Node.js, Angular, APIs REST e bancos de dados relacionais e não relacionais.</p>
 
-    <div class="atributos">
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="scrollToSection('contact')">Fale comigo</button>
+          <button class="btn btn-ghost" onclick="scrollToSection('projects')">Ver projetos</button>
+        </div>
 
-      <div class="linha"></div>
-
-      <div>
-
-      <h2>Estrelas 45</h2>
-      <h2>Estrelas 45</h2>
-      <h2>Estrelas 45</h2>
-      <h2>Estrelas 45</h2>
-
+        <ul class="stack-tags">
+          <li>Node.js</li>
+          <li>Angular</li>
+          <li>JavaScript</li>
+          <li>MongoDB</li>
+          <li>MySQL</li>
+          <li>Bootstrap</li>
+        </ul>
       </div>
 
-    </div>
-
-  </section>
-
-  <section id="about">
-
-    <h2>Sobre Mim</h2>
-
-    <p style="margin-top:10px; color:#94a3b8; max-width:600px;">
-      Desenvolvedor Full Stack com experiência na criação de aplicações web completas, desde o frontend até
-      ao backend. Trabalho com JavaScript, Node.js, Express, MongoDB e MySQL, desenvolvendo sistemas como
-      aplicações de gestão, APIs REST e plataformas web. Tenho experiência com deploy de projetos e controlo
-      de versões com GitHub. Procuro oportunidades para crescer profissionalmente e contribuir com soluções
-      eficientes e escaláveis.
-    </p>
-
-  </section>
-
-  <section id="projects">
-
-    <h2>Projetos</h2>
-
-    <div class="projects">
-
-      <div class="card">
-
-        <h3>Sistema de Inventário de Equipamentos de TI (SIETI)</h3>
-
-        <p>Sistema completo de gestão e controle de equipamentos informáticos.</p>
-        <a href="https://github.com/fidelmaluto/SIETI.git">Ver Projeto no GitHub</a>
-
+      <div class="editor reveal" aria-hidden="true">
+        <div class="editor-titlebar">
+          <span class="tl-dot red"></span>
+          <span class="tl-dot yellow"></span>
+          <span class="tl-dot green"></span>
+          <span class="editor-filename">perfil.js</span>
+        </div>
+        <div class="editor-body">
+          <pre><code id="codeTyper"></code></pre>
+        </div>
       </div>
 
-      <div class="card">
+    </section>
 
-        <h2>Baixar-Músicas</h2>
+    <!-- ABOUT -->
+    <section id="about" class="reveal">
+      <div class="section-head">
+        <span class="prompt">$ cat sobre.md</span>
+        <h2>Sobre mim</h2>
+      </div>
 
-        <p>Site de baixar e reproduzir músicas, com APIs consumindo o YOUTUBE. Ainda a que crescer muito e futuramente
-          será adicionadas novas funções...
+      <div class="about-grid">
+        <img src="img/debygoal.jpg" alt="Foto de Fidel Maluto" class="avatar">
+        <p class="about-text">
+          Desenvolvedor Full Stack com experiência na criação de aplicações web completas, do frontend ao backend.
+          Trabalho com JavaScript, Node.js, Express, MongoDB e MySQL, desenvolvendo sistemas de gestão, APIs REST
+          e plataformas web. Tenho experiência com deploy de projetos e controlo de versões com GitHub.
+          Procuro oportunidades para crescer profissionalmente e contribuir com soluções eficientes e escaláveis.
         </p>
-        <a href="https://github.com/fidelmaluto/baixar-musica">Ver Projeto no GitHub</a><br>
-        <a href="https://baixar-musica.onrender.com">Ver Projeto online</a>
+      </div>
+    </section>
 
+    <!-- PROJECTS -->
+    <section id="projects" class="reveal">
+      <div class="section-head">
+        <span class="prompt">$ ls ./projetos</span>
+        <h2>Projetos</h2>
       </div>
 
-    <div class="card">
+      <div class="projects">
 
-      <h2>Speacker</h2>
+        <article class="card reveal">
+          <div class="card-top">
+            <span class="file-icon">📦</span>
+            <h3>SIETI</h3>
+          </div>
+          <p>Sistema completo de gestão e controlo de equipamentos informáticos.</p>
+          <div class="card-links">
+            <a href="https://github.com/fidelmaluto/SIETI.git" target="_blank" rel="noopener" class="icon-link" aria-label="Ver SIETI no GitHub">
+              <svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-2.14c-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.6.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.26 5.69.42.36.78 1.07.78 2.16v3.2c0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+              <span>Código</span>
+            </a>
+          </div>
+        </article>
 
-      <p>Site que fala em vários sotaques aquilo que vc digitar, hospedado na vercel.
-        Ainda tenho ótimos planos pra dar continuidade a esse porjeto.!
-      </p>
-      <a href="https://github.com/fidelmaluto/translatetoaudio">Ver Projeto no GitHub</a><br>
-      <a href="https://translatetoaudio.vercel.app">Ver Projeto online</a>
+        <article class="card reveal">
+          <div class="card-top">
+            <span class="file-icon">🎵</span>
+            <h3>Baixar-Músicas</h3>
+            <span class="tag">em evolução</span>
+          </div>
+          <p>Aplicação para baixar e reproduzir músicas, consumindo a API do YouTube. Continua a crescer, com novas funções a caminho.</p>
+          <div class="card-links">
+            <a href="https://github.com/fidelmaluto/baixar-musica" target="_blank" rel="noopener" class="icon-link" aria-label="Ver Baixar-Músicas no GitHub">
+              <svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-2.14c-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.6.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.26 5.69.42.36.78 1.07.78 2.16v3.2c0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+              <span>Código</span>
+            </a>
+            <a href="https://baixar-musica.onrender.com" target="_blank" rel="noopener" class="icon-link" aria-label="Ver Baixar-Músicas online">
+              <svg viewBox="0 0 24 24"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3ZM5 5h5v2H7v10h10v-3h2v5H5V5Z"/></svg>
+              <span>Ver online</span>
+            </a>
+          </div>
+        </article>
 
-    </div>
+        <article class="card reveal">
+          <div class="card-top">
+            <span class="file-icon">🔊</span>
+            <h3>Speacker</h3>
+          </div>
+          <p>Converte texto digitado em áudio, com suporte a vários sotaques. Hospedado na Vercel, com bons planos de evolução.</p>
+          <div class="card-links">
+            <a href="https://github.com/fidelmaluto/translatetoaudio" target="_blank" rel="noopener" class="icon-link" aria-label="Ver Speacker no GitHub">
+              <svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-2.14c-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.6.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.26 5.69.42.36.78 1.07.78 2.16v3.2c0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+              <span>Código</span>
+            </a>
+            <a href="https://translatetoaudio.vercel.app" target="_blank" rel="noopener" class="icon-link" aria-label="Ver Speacker online">
+              <svg viewBox="0 0 24 24"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3ZM5 5h5v2H7v10h10v-3h2v5H5V5Z"/></svg>
+              <span>Ver online</span>
+            </a>
+          </div>
+        </article>
 
-    <div class="card">
+        <article class="card reveal">
+          <div class="card-top">
+            <span class="file-icon">📅</span>
+            <h3>DataAtual</h3>
+          </div>
+          <p>Meu primeiro pacote publicado: formata datas com JavaScript puro. Disponível no NPM.</p>
+          <div class="card-links">
+            <a href="https://github.com/fidelmaluto/dataatual" target="_blank" rel="noopener" class="icon-link" aria-label="Ver DataAtual no GitHub">
+              <svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-2.14c-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.6.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.26 5.69.42.36.78 1.07.78 2.16v3.2c0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+              <span>Código</span>
+            </a>
+            <a href="https://npm.com/fidelmaluto/dataatual" target="_blank" rel="noopener" class="icon-link" aria-label="Ver DataAtual no NPM">
+              <svg viewBox="0 0 24 24"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3ZM5 5h5v2H7v10h10v-3h2v5H5V5Z"/></svg>
+              <span>NPM</span>
+            </a>
+          </div>
+        </article>
 
-      <h2>DataAtual</h2>
+        <article class="card reveal">
+          <div class="card-top">
+            <span class="file-icon">📚</span>
+            <h3>Desenvolvimento Web</h3>
+            <span class="tag">em desenvolvimento</span>
+          </div>
+          <p>Guia de carreira para iniciantes em desenvolvimento web, com materiais em PDF. Projeto em construção.</p>
+          <div class="card-links">
+            <a href="https://github.com/fidelmaluto/ProjetoTLP" target="_blank" rel="noopener" class="icon-link" aria-label="Ver Desenvolvimento Web no GitHub">
+              <svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-2.14c-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.6.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.26 5.69.42.36.78 1.07.78 2.16v3.2c0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+              <span>Código</span>
+            </a>
+          </div>
+        </article>
 
-      <p>Meu primeiro pacote criado. Ajuda a formatar as fechas(datas). Criado com JS puro e publicado no NPM.
-      </p>
-      <a href="https://github.com/fidelmaluto/dataatual">Ver Projeto no GitHub</a><br>
-      <a href="https://npm.com/fidelmaluto/dataatual">Ver Projeto no NPM</a>
+        <article class="card reveal">
+          <div class="card-top">
+            <span class="file-icon">🔁</span>
+            <h3>CRUD-simples</h3>
+          </div>
+          <p>Projeto criado com Node.js e testado no Insomnia, com dois middlewares: verificador de ID e ilustrador da rota em uso.</p>
+          <div class="card-links">
+            <a href="https://github.com/fidelmaluto/CRUD-simples" target="_blank" rel="noopener" class="icon-link" aria-label="Ver CRUD-simples no GitHub">
+              <svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-2.14c-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.6.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.26 5.69.42.36.78 1.07.78 2.16v3.2c0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+              <span>Código</span>
+            </a>
+          </div>
+        </article>
 
-    </div>
+        <article class="card reveal">
+          <div class="card-top">
+            <span class="file-icon">✅</span>
+            <h3>PopUp</h3>
+          </div>
+          <p>Mini-projeto interativo que ilustra uma mensagem de sucesso — ideal após um cadastro de usuário ou produto.</p>
+          <div class="card-links">
+            <a href="https://github.com/fidelmaluto/PopUp" target="_blank" rel="noopener" class="icon-link" aria-label="Ver PopUp no GitHub">
+              <svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-2.14c-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.6.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.26 5.69.42.36.78 1.07.78 2.16v3.2c0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+              <span>Código</span>
+            </a>
+          </div>
+        </article>
 
-    <div class="card">
+        <article class="card reveal">
+          <div class="card-top">
+            <span class="file-icon">📊</span>
+            <h3>Dashboard</h3>
+          </div>
+          <p>Painel simples com dados de 3 elementos, gráfico de desempenho e mapa de localização.</p>
+          <div class="card-links">
+            <a href="https://github.com/fidelmaluto/Dashboard" target="_blank" rel="noopener" class="icon-link" aria-label="Ver Dashboard no GitHub">
+              <svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-2.14c-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.6.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.26 5.69.42.36.78 1.07.78 2.16v3.2c0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+              <span>Código</span>
+            </a>
+          </div>
+        </article>
 
-      <h2>Desenvolvimento Web</h2>
+        <article class="card reveal">
+          <div class="card-top">
+            <span class="file-icon">🧑‍💼</span>
+            <h3>SGRH</h3>
+            <span class="tag">em desenvolvimento</span>
+          </div>
+          <p>Sistema de Gestão de Recursos Humanos, focado na gestão fácil e eficaz de empresas.</p>
+          <div class="card-links">
+            <a href="https://github.com/fidelmaluto/SGRH.git" target="_blank" rel="noopener" class="icon-link" aria-label="Ver SGRH no GitHub">
+              <svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-2.14c-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.6.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.26 5.69.42.36.78 1.07.78 2.16v3.2c0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+              <span>Código</span>
+            </a>
+          </div>
+        </article>
 
-      <p>Um site que dirige ou acompanha a carreira de iniciantes no desenvolvimento Web, com livros PDF(Por
-        enquanto), o mesmo ainda está em desenvolvimento.
-      </p>
+        <article class="card reveal">
+          <div class="card-top">
+            <span class="file-icon">🗂️</span>
+            <h3>SCF Web</h3>
+          </div>
+          <p>Sistema de Cadastro de Funcionários — mini-sistema que possibilita o cadastro de usuários.</p>
+          <div class="card-links">
+            <a href="https://github.com/fidelmaluto/scf.git" target="_blank" rel="noopener" class="icon-link" aria-label="Ver SCF Web no GitHub">
+              <svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-2.14c-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.6.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.26 5.69.42.36.78 1.07.78 2.16v3.2c0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+              <span>Código</span>
+            </a>
+          </div>
+        </article>
 
-      <a href="https://github.com/fidelmaluto/ProjetoTLP">Ver Projeto no GitHub</a>
+        <article class="card card-muted reveal">
+          <div class="card-top">
+            <span class="file-icon">🏢</span>
+            <h3>Fleves Serviços</h3>
+          </div>
+          <p>Empresa de soluções tecnológicas — projeto pessoal em paralelo à carreira de desenvolvedor.</p>
+        </article>
 
-    </div>
+      </div>
+    </section>
 
-    <div class="card">
+    <!-- CONTACT -->
+    <section id="contact" class="reveal">
+      <div class="section-head">
+        <span class="prompt">$ ./contato --enviar</span>
+        <h2>Vamos conversar</h2>
+        <p class="lead">Está com um projeto em mente ou uma vaga disponível? Escolha o canal que preferir, ou envie uma mensagem direta abaixo.</p>
+      </div>
 
-      <h2>CRUD-simples</h2>
+      <div class="contact-grid">
 
-      <p>Um projeto simples criado com NODEJS e testado no Insomnia, e criei dois
-        Middlewares(1º Verificador de ID, 2º Ilustrador da rota em uso.)
-      </p>
-      <a href="https://github.com/fidelmaluto/CRUD-simples">Ver Projeto no GitHub</a>
+        <ul class="contact-list">
+          <li>
+            <a href="mailto:fidel.maluto77@gmail.com" class="contact-item">
+              <span class="contact-icon">
+                <svg viewBox="0 0 24 24"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13A2.5 2.5 0 0 1 19.5 21h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2.2.2 7.8 6.1 7.8-6.1H4.2ZM20 7.3l-7.4 5.8a1 1 0 0 1-1.2 0L4 7.3v11.2c0 .3.2.5.5.5h15c.3 0 .5-.2.5-.5V7.3Z"/></svg>
+              </span>
+              <span class="contact-text">
+                <strong>Email</strong>
+                <span>fidel.maluto77@gmail.com</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/fidelmaluto" target="_blank" rel="noopener" class="contact-item">
+              <span class="contact-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-2.14c-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.6.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.26 5.69.42.36.78 1.07.78 2.16v3.2c0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+              </span>
+              <span class="contact-text">
+                <strong>GitHub</strong>
+                <span>fidelmaluto</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/fidel-maluto-26380232a" target="_blank" rel="noopener" class="contact-item">
+              <span class="contact-icon">
+                <svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.64h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.63c0-1.34-.02-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97V21h-4V9Z"/></svg>
+              </span>
+              <span class="contact-text">
+                <strong>LinkedIn</strong>
+                <span>Fidel Maluto</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/244950620392" target="_blank" rel="noopener" class="contact-item">
+              <span class="contact-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.1-1.33A9.95 9.95 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2Zm0 18.13c-1.6 0-3.1-.44-4.38-1.2l-.31-.19-3.03.79.81-2.95-.2-.3A8.1 8.1 0 1 1 20.1 12a8.1 8.1 0 0 1-8.1 8.13Zm4.45-6.06c-.24-.12-1.44-.71-1.66-.8-.22-.08-.39-.12-.55.12-.16.24-.63.79-.78.96-.14.16-.29.18-.53.06-.24-.12-1.03-.38-1.96-1.2-.72-.65-1.21-1.44-1.35-1.68-.14-.24-.02-.37.11-.5.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42h-.47c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.13 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z"/></svg>
+              </span>
+              <span class="contact-text">
+                <strong>WhatsApp</strong>
+                <span>+244 950 620 392</span>
+              </span>
+            </a>
+          </li>
+        </ul>
 
-    </div>
+        <form class="whatsapp-form" id="whatsappForm">
+          <p class="form-eyebrow"><span class="dot pulse"></span>enviar via WhatsApp</p>
 
-    <div class="card">
+          <label for="wa-name">Nome</label>
+          <input type="text" id="wa-name" name="name" placeholder="Como devo chamar-te?" required>
 
-      <h2>PopUp</h2>
+          <label for="wa-message">Mensagem</label>
+          <textarea id="wa-message" name="message" rows="4" placeholder="Conta-me sobre o teu projeto ou vaga..." required></textarea>
 
-      <p>Um mini-projeto, algo simples e interativo que ilustra uma mensagem de Sucesso. Bom pra usar após o
-        cadastro de um usuário o produto.
-      </p>
-      <a href="https://github.com/fidelmaluto/PopUp">Ver Projeto no GitHub</a>
+          <button type="submit" class="btn btn-primary btn-whatsapp">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.1-1.33A9.95 9.95 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2Zm0 18.13c-1.6 0-3.1-.44-4.38-1.2l-.31-.19-3.03.79.81-2.95-.2-.3A8.1 8.1 0 1 1 20.1 12a8.1 8.1 0 0 1-8.1 8.13Zm4.45-6.06c-.24-.12-1.44-.71-1.66-.8-.22-.08-.39-.12-.55.12-.16.24-.63.79-.78.96-.14.16-.29.18-.53.06-.24-.12-1.03-.38-1.96-1.2-.72-.65-1.21-1.44-1.35-1.68-.14-.24-.02-.37.11-.5.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42h-.47c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.13 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z"/></svg>
+            Enviar via WhatsApp
+          </button>
+          <p class="form-hint">Ao enviar, o WhatsApp abre numa nova aba com a tua mensagem pronta.</p>
+        </form>
 
-    </div>
+      </div>
+    </section>
 
-    <div class="card">
-
-      <h2>Dashboard</h2>
-
-      <p>Um Dashboard simples que apresenata dados de 3 elementos, apresenta o gráfico de desempenho e um mapa
-        que ilustra a localização.
-      </p>
-      <a href="https://github.com/fidelmaluto/Dashboard">Ver Projeto no GitHub</a>
-
-    </div>
-
-    <div class="card">
-
-      <h2>SGRH</h2>
-
-      <p>Sistema de Gestão de Recursos Humanos, focados na gestão fácil e eficaz das empresas (Ainda em
-        desenvolvimento...)</p>
-      <a href="https://github.com/fidelmaluto/SGRH.git">Ver Projeto no GitHub</a>
-
-    </div>
-
-    <div class="card">
-
-      <h2>SCF Web</h2>
-
-      <p>Sistema de Cadastro de Funcionários, um mini-sistema que possibilita o cadastro de usuários.</p>
-      <a href="https://github.com/fidelmaluto/scf.git">Ver Projeto no GitHub</a>
-
-    </div>
-
-    <div class="card">
-
-      <h3>Fleves Serviços</h3>
-      <p>Empresa de soluções tecnológicas.</p>
-
-    </div>
-
-    </div>
-
-  </section>
-
-  <section id="contact" class="contact">
-
-    <h2>Contato</h2>
-    <p style="margin-top:10px;">Email: <span> fidel.maluto77@gmail.com </span> </p>
-    <p>GitHub:<a href="https://github.com/fidelmaluto" target="_blank"> Fidel Maluto (fidelmaluto) </a></p>
-    <p>WhatsApp: <span> +244 950 620 392 </span> </p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/fidel-maluto-26380232a"> Fidel Maluto </a></p>
-
-  </section>
+  </main>
 
   <footer>
-    © 2026 Fleves - Todos os direitos reservados
+    <span>© 2026 Fleves — Todos os direitos reservados</span>
+    <span class="dim">build: main</span>
   </footer>
 
 </body>
