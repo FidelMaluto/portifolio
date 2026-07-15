@@ -1,4 +1,4 @@
-/*  TOKENS  */
+/* ============ TOKENS ============ */
 :root {
   --bg: #0B0F17;
   --bg-panel: #121826;
@@ -64,7 +64,7 @@ a {
   color: var(--amber);
 }
 
-/*  HEADER / NAV  */
+/* ============ HEADER / NAV ============ */
 header {
   position: fixed;
   top: 0;
@@ -141,7 +141,7 @@ nav a.active {
 .menu-toggle.active span:nth-child(2) { opacity: 0; }
 .menu-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/*  SECTIONS / LAYOUT  */
+/* ============ SECTIONS / LAYOUT ============ */
 main {
   position: relative;
   z-index: 2;
@@ -181,7 +181,7 @@ section {
   max-width: 520px;
 }
 
-/*  HERO  */
+/* ============ HERO ============ */
 .hero {
   display: flex;
   align-items: center;
@@ -374,7 +374,7 @@ section {
   50% { opacity: 0; }
 }
 
-/*  ABOUT  */
+/* ============ ABOUT ============ */
 .about-grid {
   display: flex;
   align-items: center;
@@ -400,10 +400,10 @@ section {
   min-width: 280px;
 }
 
-/*  PROJECTS  */
+/* ============ PROJECTS ============ */
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 20px;
 }
 
@@ -488,7 +488,7 @@ section {
   color: var(--teal);
 }
 
-/*  CONTACT  */
+/* ============ CONTACT ============ */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -621,13 +621,15 @@ section {
   text-align: center;
 }
 
-/*  FOOTER  */
+/* ============ FOOTER ============ */
 footer {
   position: relative;
   z-index: 2;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 8px 16px;
   padding: 26px 48px;
   border-top: 1px solid var(--border);
   color: var(--text-dim);
@@ -635,7 +637,7 @@ footer {
   font-family: var(--font-display);
 }
 
-/*  REVEAL / SCROLL ANIMATION  */
+/* ============ REVEAL / SCROLL ANIMATION ============ */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -661,7 +663,7 @@ footer {
   }
 }
 
-/*  RESPONSIVE  */
+/* ============ RESPONSIVE ============ */
 @media (max-width: 900px) {
   .hero {
     flex-direction: column;
@@ -727,5 +729,88 @@ footer {
 
   .tag {
     margin-left: 0;
+  }
+
+  .hero-actions {
+    flex-wrap: wrap;
+  }
+
+  .hero-actions .btn {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 14px 16px;
+  }
+
+  .logo {
+    font-size: 15px;
+  }
+
+  section {
+    padding: 110px 16px 50px;
+  }
+
+  .hero {
+    padding-top: 120px;
+    gap: 36px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero .role {
+    font-size: 15.5px;
+  }
+
+  .eyebrow {
+    font-size: 11.5px;
+    padding: 5px 11px;
+  }
+
+  .section-head h2 {
+    font-size: 26px;
+  }
+
+  .editor-body {
+    padding: 18px 16px;
+    min-height: unset;
+  }
+
+  .editor-body pre {
+    font-size: 12.5px;
+  }
+
+  .avatar {
+    width: 140px;
+    height: 140px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .contact-item {
+    padding: 13px 14px;
+    gap: 12px;
+  }
+
+  .contact-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .whatsapp-form {
+    padding: 20px;
+  }
+
+  footer {
+    padding: 22px 16px;
+    justify-content: center;
+    text-align: center;
   }
 }
