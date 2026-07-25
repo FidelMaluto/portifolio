@@ -1,4 +1,4 @@
-/* ============ TOKENS ============ */
+/*  TOKENS  */
 :root {
   --bg: #0B0F17;
   --bg-panel: #121826;
@@ -64,7 +64,7 @@ a {
   color: var(--amber);
 }
 
-/* ============ HEADER / NAV ============ */
+/*  HEADER / NAV  */
 header {
   position: fixed;
   top: 0;
@@ -141,7 +141,7 @@ nav a.active {
 .menu-toggle.active span:nth-child(2) { opacity: 0; }
 .menu-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* ============ SECTIONS / LAYOUT ============ */
+/*  SECTIONS / LAYOUT  */
 main {
   position: relative;
   z-index: 2;
@@ -181,7 +181,7 @@ section {
   max-width: 520px;
 }
 
-/* ============ HERO ============ */
+/*  HERO  */
 .hero {
   display: flex;
   align-items: center;
@@ -374,7 +374,7 @@ section {
   50% { opacity: 0; }
 }
 
-/* ============ ABOUT ============ */
+/*  ABOUT  */
 .about-grid {
   display: flex;
   align-items: center;
@@ -400,7 +400,7 @@ section {
   min-width: 280px;
 }
 
-/* ============ PROJECTS ============ */
+/*  PROJECTS  */
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
@@ -434,6 +434,10 @@ section {
 
 .file-icon {
   font-size: 18px;
+}
+
+.file-icon i {
+  color: #4FC1B0;
 }
 
 .card h3 {
@@ -488,7 +492,7 @@ section {
   color: var(--teal);
 }
 
-/* ============ CONTACT ============ */
+/*  CONTACT  */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -621,7 +625,7 @@ section {
   text-align: center;
 }
 
-/* ============ FOOTER ============ */
+/*  FOOTER  */
 footer {
   position: relative;
   z-index: 2;
@@ -637,7 +641,7 @@ footer {
   font-family: var(--font-display);
 }
 
-/* ============ REVEAL / SCROLL ANIMATION ============ */
+/*  REVEAL / SCROLL ANIMATION  */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -663,7 +667,7 @@ footer {
   }
 }
 
-/* ============ RESPONSIVE ============ */
+/*  RESPONSIVE  */
 @media (max-width: 900px) {
   .hero {
     flex-direction: column;
