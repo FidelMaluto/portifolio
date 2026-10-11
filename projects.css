@@ -1,0 +1,79 @@
+/* ===== Álbum de projetos, modal e currículo (carregar depois do style.css) ===== */
+#projects, #resume { min-height: auto; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: -16px 0 28px; }
+.chip { font: 500 12.5px var(--font-display); color: var(--text-muted); background: transparent; border: 1px solid var(--border); padding: 7px 14px; border-radius: 999px; cursor: pointer; transition: .2s var(--ease); }
+.chip:hover { color: var(--text); border-color: var(--text-dim); }
+.chip.on { color: var(--amber); border-color: rgba(233,180,76,.4); background: var(--amber-soft); }
+
+.album { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(210px, 100%), 1fr)); gap: 18px; }
+.tile { text-align: left; background: none; border: 0; color: inherit; font: inherit; cursor: pointer; opacity: 0; display: flex; flex-direction: column; gap: 2px; transition: transform .25s var(--ease); }
+.tile.in { opacity: 1; animation: rise .55s var(--ease) var(--d, 0ms) backwards; }
+@keyframes rise { from { opacity: 0; transform: translateY(18px); } }
+.tile:hover { transform: translateY(-5px); }
+.tile:focus-visible { outline: 2px solid var(--teal); outline-offset: 4px; border-radius: var(--radius); }
+.cover { position: relative; aspect-ratio: 4 / 3; border-radius: var(--radius); overflow: hidden; display: grid; place-items: center; margin-bottom: 8px; border: 1px solid var(--border);
+  background: linear-gradient(135deg, hsl(var(--h) 45% 24%), hsl(calc(var(--h) + 40) 40% 12%)); transition: border-color .25s var(--ease); }
+.tile:hover .cover { border-color: rgba(233,180,76,.45); }
+.cover > i { font-size: 38px; color: hsl(var(--h) 70% 72%); transition: transform .35s var(--ease); }
+.cover img, .pm-cover img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s var(--ease); }
+.tile:hover .cover > i, .tile:hover .cover img { transform: scale(1.08); }
+.peek { position: absolute; inset: 0; display: grid; place-items: center; background: rgba(11,15,23,.55); opacity: 0; transition: opacity .25s var(--ease); font-size: 20px; color: #fff; }
+.tile:hover .peek, .tile:focus-visible .peek { opacity: 1; }
+.tile strong { font: 600 14.5px var(--font-display); }
+.tile small { font-size: 12.5px; color: var(--text-muted); }
+.st { font: 500 10.5px var(--font-display); color: var(--amber); background: var(--amber-soft); padding: 3px 9px; border-radius: 999px; }
+.st.online, .st.concluido { color: var(--teal); background: var(--teal-soft); }
+.cover .st { position: absolute; top: 8px; left: 8px; font-style: normal; backdrop-filter: blur(6px); background: rgba(11,15,23,.7); }
+.more { display: block; margin: 28px auto 0; }
+
+/* Modal (dialog nativo) */
+#projModal { margin: auto; width: min(720px, 92vw); max-height: 90vh; overflow: auto; padding: 0; color: var(--text); background: var(--bg-panel); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: 0 40px 80px rgba(0,0,0,.6); }
+#projModal::backdrop { background: rgba(5,8,13,.75); backdrop-filter: blur(6px); }
+#projModal[open] { animation: rise .3s var(--ease); }
+#pm { display: grid; grid-template-columns: 1fr 1.2fr; }
+.pm-cover { min-height: 260px; display: grid; place-items: center; overflow: hidden; background: linear-gradient(135deg, hsl(var(--h) 45% 24%), hsl(calc(var(--h) + 40) 40% 12%)); }
+.pm-cover > i { font-size: 64px; color: hsl(var(--h) 70% 72%); }
+.pm-body { padding: 32px 28px 24px; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.pm-body h3 { font: 700 22px var(--font-display); letter-spacing: -.02em; }
+.pm-body p { color: var(--text-muted); font-size: 15px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tags span { font: 500 11.5px var(--font-display); color: var(--text-muted); border: 1px solid var(--border); padding: 3px 10px; border-radius: 999px; }
+.pm-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+.pm-links .btn { padding: 10px 18px; font-size: 13.5px; }
+.pm-nav { display: flex; justify-content: space-between; padding: 12px 16px; border-top: 1px solid var(--border); }
+.pm-nav button, #pmClose { background: var(--bg-elevated); border: 1px solid var(--border); color: var(--text); width: 38px; height: 38px; border-radius: 10px; cursor: pointer; transition: .2s var(--ease); }
+.pm-nav button:hover, #pmClose:hover { border-color: var(--teal); color: var(--teal); }
+#pmClose { position: absolute; top: 12px; right: 12px; z-index: 2; }
+
+/* Currículo */
+.resume-card { display: grid; grid-template-columns: auto 1fr; gap: 36px; align-items: center; background: var(--bg-panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; }
+.doc { width: 120px; aspect-ratio: 3 / 4; border-radius: 10px; background: linear-gradient(160deg, var(--bg-elevated), var(--bg)); border: 1px solid var(--border); display: grid; place-content: center; justify-items: center; gap: 6px; box-shadow: 0 20px 40px -15px rgba(0,0,0,.6); transform: rotate(-3deg); transition: transform .3s var(--ease); }
+.resume-card:hover .doc { transform: rotate(0); }
+.doc i { font-size: 38px; color: var(--rose); }
+.doc span { font: 700 12px var(--font-display); color: var(--text-muted); }
+.resume-info h3 { font: 700 20px var(--font-display); letter-spacing: -.02em; }
+.stats { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; margin: 20px 0 24px; }
+.stats li { border-left: 2px solid var(--amber); padding-left: 12px; display: flex; flex-direction: column; }
+.stats b { font: 700 15px var(--font-display); }
+.stats span { font-size: 12.5px; color: var(--text-muted); }
+.resume-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.contact-icon i { font-size: 19px; }
+.btn-whatsapp i { font-size: 17px; }
+
+@media (max-width: 760px) {
+  #pm { grid-template-columns: 1fr; }
+  .pm-cover { min-height: 0; aspect-ratio: 16 / 9; }
+  .pm-body { padding: 22px 20px 16px; }
+  .resume-card { grid-template-columns: 1fr; padding: 22px; gap: 24px; justify-items: start; }
+  .doc { width: 90px; }
+}
+@media (max-width: 560px) {
+  .album { grid-template-columns: repeat(2, 1fr); gap: 14px 12px; }
+  .tile strong { font-size: 13.5px; }
+  .cover > i { font-size: 30px; }
+  .cover .st { font-size: 9.5px; padding: 2px 7px; }
+  .resume-actions .btn { flex: 1 1 100%; justify-content: center; }
+}
+@media (hover: none) { .peek { display: none; } }
+@media (prefers-reduced-motion: reduce) { .tile { opacity: 1; } .tile.in, #projModal[open] { animation: none; } }
