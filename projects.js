@@ -1,11 +1,11 @@
-/* ===== PROJETOS: edite apenas esta lista =====
+/* PROJETOS: edite apenas esta lista
    cat: Web | Sistemas | Ferramentas | Empresa (cria os filtros sozinho)
    status: online | evolucao | concluido
    image: opcional, ex.: "img/confeitaria.jpg" (sem imagem, usa o ícone) */
 const PROJECTS = [
   { name: "Doces Tentações", icon: "cake-candles", cat: "Web", status: "online", tags: ["Loja online", "Catálogo"], desc: "Site de confeitaria com catálogo de produtos, compras online e encomendas.", github: "https://github.com/fidelmaluto/confeitaria-lissandra", live: "https://lissandradocestentacoes.vercel.app" },
   { name: "SIETI", icon: "box", cat: "Sistemas", status: "concluido", tags: ["Node.js", "Gestão"], desc: "Sistema completo de gestão e controlo de equipamentos informáticos.", github: "https://github.com/fidelmaluto/SIETI.git" },
-  { name: "Baixar-Músicas", icon: "music", cat: "Web", status: "evolucao", tags: ["API YouTube", "Node.js"], desc: "Aplicação para baixar e reproduzir músicas, consumindo a API do YouTube. Continua a crescer.", github: "https://github.com/fidelmaluto/baixar-musica", live: "https://baixar-musica.onrender.com" },
+  { name: "Baixar-Músicas", icon: "music", cat: "Web", status: "evolucao", tags: ["API YouTube", "Node.js"], desc: "Aplicação para baixar e reproduzir músicas, consumindo a API do YouTube. Continua a crescer.", github: "https://github.com/fidelmaluto/baixar-musica", live: "https://playdeby.onrender.com" },
   { name: "Speacker", icon: "volume-high", cat: "Web", status: "online", tags: ["JavaScript", "Vercel"], desc: "Converte texto digitado em áudio, com suporte a vários sotaques.", github: "https://github.com/fidelmaluto/translatetoaudio", live: "https://translatetoaudio.vercel.app" },
   { name: "SGRH", icon: "user-tie", cat: "Sistemas", status: "evolucao", tags: ["Full Stack", "RH"], desc: "Sistema de Gestão de Recursos Humanos, focado na gestão fácil e eficaz de empresas.", github: "https://github.com/fidelmaluto/SGRH.git" },
   { name: "DataAtual", icon: "calendar-days", cat: "Ferramentas", status: "online", tags: ["JavaScript", "NPM"], desc: "O meu primeiro pacote publicado: formata datas com JavaScript puro.", github: "https://github.com/fidelmaluto/dataatual", live: "https://npm.com/fidelmaluto/dataatual" },

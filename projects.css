@@ -1,4 +1,4 @@
-/* ===== Álbum de projetos, modal e currículo (carregar depois do style.css) ===== */
+/* Álbum de projetos, modal e currículo (carregar depois do style.css) */
 #projects, #resume { min-height: auto; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: -16px 0 28px; }
 .chip { font: 500 12.5px var(--font-display); color: var(--text-muted); background: transparent; border: 1px solid var(--border); padding: 7px 14px; border-radius: 999px; cursor: pointer; transition: .2s var(--ease); }
