@@ -114,6 +114,15 @@ const PROJECTS = [
     tags: ["Tecnologia"],
     desc: "Empresa de soluções tecnológicas, em paralelo à carreira de desenvolvedor.",
   },
+  {
+    name: "SGICR - SAFT",
+    icon: "file-pdf",
+    cat: "Sistemas",
+    status: "concluido",
+    tags: ["Relatório", "Controlo"],
+    desc: "Sistema de Gestão de Inventário e Clientes com Relatório SAFT (Simulado em PDF).",
+    github: "https://github.com/FidelMaluto/gicr_saft",
+  },
 ];
 
 (() => {
